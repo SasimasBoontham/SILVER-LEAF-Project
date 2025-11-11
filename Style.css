@@ -1,1 +1,439 @@
+/* การตั้งค่าพื้นฐาน */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* เปลี่ยนเป็นฟอนต์ที่คุณต้องการ */
+}
 
+body {
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer; /* เน้นว่าเป็นสิ่งที่คลิกได้ */
+}
+
+ul {
+    list-style: none;
+}
+
+/* 1. Header และ Navigation */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.logo h1 {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #444;
+}
+
+.main-nav ul {
+    display: flex;
+}
+
+.main-nav li {
+    margin-left: 25px;
+}
+
+.main-nav a {
+    color: #555;
+    font-weight: 500;
+    font-size: 0.9em;
+    padding: 5px 0;
+    transition: color 0.3s;
+}
+
+.main-nav a:hover {
+    color: #ff9900;
+}
+
+/* 2. Hero Section */
+.hero-section {
+    position: relative;
+    height: 700px;
+    background: url('hero-background.jpg') no-repeat center center/cover; /* *** เปลี่ยนชื่อไฟล์รูปของคุณ *** */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* ปรับปรุงการแสดงผลภาพพื้นหลังให้เบลอและสว่างตามรูปตัวอย่าง */
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(2px);
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    color: #333;
+    max-width: 650px;
+    margin-top: -50px;
+}
+
+.tagline-top {
+    font-size: 0.9em;
+    color: #444;
+    margin-bottom: 5px;
+}
+
+.main-title-container {
+    font-size: 5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 1;
+}
+
+.main-title-part1 {
+    color: #ff9900;
+}
+
+.main-title-part2 {
+    color: #444;
+}
+
+.headline {
+    font-size: 1.5em;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.subheadline {
+    font-size: 1em;
+    line-height: 1.5;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+/* ปุ่ม Call-to-Action (CTA) */
+.cta-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    padding: 12px 25px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 0.9em;
+    transition: background-color 0.3s, opacity 0.3s;
+}
+
+.btn img {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+}
+
+.btn-primary {
+    background-color: #ff9900;
+    color: white;
+    border: 2px solid #ff9900;
+}
+
+.btn-primary:hover {
+    background-color: #e68a00;
+}
+
+.btn-secondary {
+    background-color: white;
+    color: #555;
+    border: 2px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn-secondary:hover {
+    background-color: #f0f0f0;
+}
+
+/* 3. Footer Tagline ด้านล่างสุด */
+.bottom-tagline {
+    text-align: center;
+    padding: 40px 0;
+    font-size: 1.1em;
+    color: #666;
+    background-color: white;
+}
+
+/* 4. About Us Section */
+.about-us-section {
+    background-color: #fcfcfc;
+    padding: 80px 5%;
+}
+
+.about-content {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+.profile-card {
+    flex-basis: 350px;
+    text-align: center;
+    background-color: #fdfae7;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.profile-img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.profile-card h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.profile-card p {
+    font-size: 0.85em;
+    color: #999;
+    font-weight: bold;
+}
+
+.text-content {
+    flex-grow: 1;
+    max-width: 700px;
+}
+
+.intro-text {
+    color: #ff9900;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 1.1em;
+}
+
+.body-text {
+    font-size: 1em;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.highlight-text {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #333;
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+
+.stat-container {
+    display: flex;
+    gap: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-number {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #ff9900;
+}
+
+.stat-label {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 5px;
+    max-width: 150px;
+}
+
+
+/* 5. Featured Communities Section */
+.featured-communities-section {
+    text-align: center;
+    padding: 80px 5%;
+    background-color: white;
+}
+
+.featured-communities-section h2 {
+    font-size: 2.2em;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.communities-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.community-card {
+    text-align: left;
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    display: block; /* ทำให้ลิงก์ครอบคลุมทั้ง Card */
+    transition: transform 0.2s, box-shadow 0.2s;
+    color: inherit;
+}
+
+.community-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.community-img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.community-card h4 {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.community-card p {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 10px;
+    height: 3em;
+    overflow: hidden;
+}
+
+.rating {
+    color: #ff9900;
+    font-size: 0.9em;
+}
+
+
+/* 6. Meet the Experts Section */
+.meet-the-experts-section {
+    background-color: #fcf8f0;
+    padding: 80px 5%;
+}
+
+.expert-intro {
+    max-width: 1000px;
+    margin: 0 auto 50px auto;
+}
+
+.expert-intro h2 {
+    font-size: 2.2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.expert-intro p {
+    font-size: 1em;
+    color: #666;
+    line-height: 1.6;
+}
+
+.expert-card {
+    display: flex;
+    max-width: 1000px;
+    margin: 25px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.expert-img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 30px;
+    flex-shrink: 0;
+}
+
+.expert-details {
+    flex-grow: 1;
+}
+
+.expert-name {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 3px;
+}
+
+.expert-title {
+    font-size: 0.9em;
+    color: #ff9900;
+    margin-bottom: 10px;
+}
+
+.expert-bio {
+    font-size: 0.95em;
+    color: #555;
+    line-height: 1.6;
+}
+
+
+/* 7. Final Footer */
+.final-footer {
+    text-align: center;
+    padding: 40px 5%;
+    background-color: #f7f7f7;
+    font-size: 0.85em;
+    color: #888;
+    line-height: 1.8;
+}
+
+.footer-links {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #888;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #555;
+}
