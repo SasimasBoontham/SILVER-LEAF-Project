@@ -352,7 +352,7 @@ nav {
 }
 
 .testimonial-image::after {
-    content: '👩‍💼';
+
     position: absolute;
     font-size: 100px;
     top: 50%;
