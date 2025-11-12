@@ -8,7 +8,8 @@
     <meta name="keywords" content="senior care, nursing home, elderly care, Thailand care homes">
     <title>Silver Leaf - Home is where life feels familiar</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Style.css">
+    <script src="api.js"></script>
 </head>
 
 <body>
@@ -20,9 +21,7 @@
     <header>
         <nav>
             <div class="logo" onclick="scrollToTop()">
-                <svg class="logo-icon" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66.42-2A6 6 0 0 1 12 17c3.31 0 6 2.69 6 6v1h2v-1c0-4.42-3.58-8-8-8-1.23 0-2.39.28-3.44.76.36-.81.75-1.59 1.15-2.34C12.53 10.5 16.67 9 17 9l.06-1z" />
-                </svg>
+                <img src="Img/logo.png" alt="Silver Leaf Logo" class="logo-icon">
                 <span>Silver Leaf</span>
             </div>
             <ul class="nav-links">
@@ -68,7 +67,7 @@
 
     <section class="testimonial">
         <div class="testimonial-content">
-            <div class="testimonial-image"></div>
+            <div class="testimonial-image" style="background-image: url('Img/jenny.png'); background-size: cover; background-position: center;"></div>
             <div class="testimonial-text">
                 <p>Jenny enjoys working with families and seniors, assisting them with their senior care and service needs.</p>
                 <p><em>"There is great satisfaction when I find the right services for a senior in need. I give a family peace of mind. She says "I'm not just finding options; I'm becoming every step in a senior's journey and I know that I am making a difference in a family's life."</em></p>
@@ -85,7 +84,7 @@
         <h2>Featured Communities</h2>
         <div class="communities-grid">
             <div class="community-card" onclick="showCommunityDetails('Yusokh Care Solution', '350 So Sukhumvit 54, Phra Khanong Tai, Phra Khanong District, Bangkok 10260, Thailand', '4', '7')">
-                <div class="community-image"></div>
+                <div class="community-image" style="background-image: url('Img/Naya.png'); background-size: cover; background-position: center;"></div>
                 <div class="community-info">
                     <h3>Yusokh Care Solution</h3>
                     <p>350 So Sukhumvit 54, Phra Khanong Tai, Phra Khanong District, Bangkok 10260, Thailand</p>
@@ -96,7 +95,7 @@
                 </div>
             </div>
             <div class="community-card" onclick="showCommunityDetails('Ban Lalisa Sansai', 'Mae Faek Mai Subdistrict, Sansai District Chiang Mai 50210, Thailand', '4', '19')">
-                <div class="community-image"></div>
+                <div class="community-image" style="background-image: url('Img/agewell.png'); background-size: cover; background-position: center;"></div>
                 <div class="community-info">
                     <h3>Ban Lalisa Sansai</h3>
                     <p>Mae Faek Mai Subdistrict, Sansai District Chiang Mai 50210, Thailand</p>
@@ -118,7 +117,7 @@
                 </div>
             </div>
             <div class="community-card" onclick="showCommunityDetails('Naya Residence', '1737 Wat Mongkhon Road, Klang, Suan Luang District, Nonthaburi 11000, Thailand', '5', '23')">
-                <div class="community-image"></div>
+                <div class="community-image" style="background-image: url('Img/lamduan.png'); background-size: cover; background-position: center;"></div>
                 <div class="community-info">
                     <h3>Naya Residence</h3>
                     <p>1737 Wat Mongkhon Road, Klang, Suan Luang District, Nonthaburi 11000, Thailand</p>
@@ -129,7 +128,7 @@
                 </div>
             </div>
             <div class="community-card" onclick="showCommunityDetails('AyoWal Nursing Home', 'No. 324, Soi Mea Phan 22, Sansai District, Chiang Mai Province 50300, Thailand', '4', '17')">
-                <div class="community-image"></div>
+                <div class="community-image" style="background-image: url('Img/susann.png'); background-size: cover; background-position: center;"></div>
                 <div class="community-info">
                     <h3>AyoWal Nursing Home</h3>
                     <p>No. 324, Soi Mea Phan 22, Sansai District, Chiang Mai Province 50300, Thailand</p>
@@ -140,7 +139,7 @@
                 </div>
             </div>
             <div class="community-card" onclick="showCommunityDetails('AyoWall Skilled Nursing', 'No.no. Moo 3, Si Bagna District, Chon Buri Province 20220, Thailand', '2', '10')">
-                <div class="community-image"></div>
+                <div class="community-image" style="background-image: url('Img/jenny.png'); background-size: cover; background-position: center;"></div>
                 <div class="community-info">
                     <h3>AyoWall Skilled Nursing</h3>
                     <p>No.no. Moo 3, Si Bagna District, Chon Buri Province 20220, Thailand</p>
@@ -153,12 +152,27 @@
         </div>
     </section>
 
+    <section class="founder">
+        <div class="founder-content">
+            <h2>🌟 Meet Our Founder</h2>
+            <div class="founder-card">
+                <div class="founder-image" style="background-image: url('Img/ayuwat.jpg'); background-size: cover; background-position: center;"></div>
+                <div class="founder-info">
+                    <h3>Molli</h3>
+                    <p>Molli is the visionary behind Silver Leaf, established with a heartfelt mission to transform the standard of senior care in Thailand. Having witnessed the challenges families face firsthand, she was driven to create a trustworthy and transparent platform connecting those seeking care with the best, verified care homes.</p>
+                    <p>Her deep commitment to the well-being and dignity of older adults forms the core of Silver Leaf's philosophy: that every senior deserves a place where life feels familiar, safe, and filled with compassion.</p>
+                    <p><em>"Finding comfort and care for our elders should never feel like a burden. It is our honor to provide the path to a home where life continues to bloom."</em></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="experts">
         <h2>Meet the Experts</h2>
         <p class="experts-subtitle">We collaborate with a team of subject-matter experts to create relevant and accurate resources for you and your family.</p>
         <div class="experts-grid">
             <div class="expert-card">
-                <div class="expert-image"></div>
+                <div class="expert-image" style="background-image: url('Img/yusokh.png'); background-size: cover; background-position: center;"></div>
                 <div class="expert-info">
                     <h3>Dr. Mulli Rothleard</h3>
                     <h4>Associate Clinical Social Worker, PhD, MSW, ASW</h4>
@@ -166,7 +180,7 @@
                 </div>
             </div>
             <div class="expert-card">
-                <div class="expert-image"></div>
+                <div class="expert-image" style="background-image: url('Img/lalisa.png'); background-size: cover; background-position: center;"></div>
                 <div class="expert-info">
                     <h3>Susann Crawford</h3>
                     <h4>SVP of Sales, 10 years with Caring</h4>
@@ -355,6 +369,10 @@
                     <input type="url" id="listWebsite" placeholder="https://www.yourcarehome.com">
                 </div>
                 <div class="form-group">
+                    <label>Care Home Image</label>
+                    <input type="file" id="listImage" accept="image/*" placeholder="Upload a care home image">
+                </div>
+                <div class="form-group">
                     <label>Description & Services</label>
                     <textarea id="listDescription" required placeholder="Describe your care home facilities, services, amenities, and what makes your home special..."></textarea>
                 </div>
@@ -446,6 +464,14 @@
 
         function handleListHome(event) {
             event.preventDefault();
+            const imageFile = document.getElementById('listImage').files[0];
+            let imageURL = 'data:image/placeholder;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==';
+            
+            // If image is uploaded, create object URL
+            if (imageFile) {
+                imageURL = URL.createObjectURL(imageFile);
+            }
+            
             const listingData = {
                 homeName: document.getElementById('listHomeName').value,
                 address: document.getElementById('listAddress').value,
@@ -455,9 +481,31 @@
                 phone: document.getElementById('listPhone').value,
                 website: document.getElementById('listWebsite').value,
                 description: document.getElementById('listDescription').value,
-                specializations: document.getElementById('listSpecializations').value
+                specializations: document.getElementById('listSpecializations').value,
+                image: imageURL,
+                rating: 4,
+                reviews: 0
             };
-            showSuccess('Listing submitted! Our team will review and contact you within 24-48 hours.');
+            
+            // Add new care home to the featured communities section
+            const communitiesGrid = document.querySelector('.communities-grid');
+            const newCard = document.createElement('div');
+            newCard.className = 'community-card';
+            newCard.onclick = () => showCommunityDetails(listingData.homeName, listingData.address, listingData.rating, listingData.reviews);
+            newCard.innerHTML = `
+                <div class="community-image" style="background-image: url('${imageURL}'); background-size: cover; background-position: center;"></div>
+                <div class="community-info">
+                    <h3>${listingData.homeName}</h3>
+                    <p>${listingData.address}</p>
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span>0 Reviews</span>
+                    </div>
+                </div>
+            `;
+            communitiesGrid.appendChild(newCard);
+            
+            showSuccess('Listing submitted! Your care home has been added to our Featured Communities.');
             closeModal('listModal');
             // In production: Send to backend API
             console.log('Listing data:', listingData);
